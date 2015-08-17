@@ -17,8 +17,8 @@
 
 - name: Make sure the include line is there in interfaces file
   lineinfile: >
-     regexp="^source\ \/etc\/network\/interfaces.d\/\*"
-     line="source /etc/network/interfaces.d/*"
+     regexp="^source\ \/etc\/network\/interfaces.d\/ifcfg\-\*"
+     line="source /etc/network/interfaces.d/ifcfg-*"
      dest=/etc/network/interfaces
      state=present
      insertafter=EOF
